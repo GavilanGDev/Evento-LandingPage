@@ -7,7 +7,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="container navbar-inner">
         <a href="#" className="navbar-logo">
-          Neon<span>Stack</span>
+          AI Business <span>Summit</span>
         </a>
         <div className="navbar-links">
           <a href="#about">About</a>

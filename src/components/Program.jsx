@@ -1,53 +1,45 @@
 const SCHEDULE = [
   {
     time: '9:00 AM',
-    title: 'Opening Keynote: The AI-Native Stack',
-    speaker: 'Dr. Mia Chen · CTO, Verceleon',
-    description: 'A provocative look at how AI is restructuring the entire software development lifecycle — from ideation to deployment to observability.',
+    title: 'Opening Keynote: AI and the Future of Business in Latin America',
+    speaker: 'Andrés Torres · VP of Digital Transformation, EPAM Systems',
+    description: 'A panoramic view of how artificial intelligence is disrupting industries across the region — and what business leaders must do today to stay ahead of the curve.',
     track: 'Main Stage',
   },
   {
     time: '10:30 AM',
-    title: 'Building Distributed Systems That Actually Hold Up',
-    speaker: 'Tariq Osei · Principal Engineer, Stripe',
-    description: 'Lessons from operating at scale: consensus, failure modes, and the patterns that survive contact with production traffic.',
-    track: 'Engineering Track',
+    title: 'From Pilot to Production: Scaling AI Across the Enterprise',
+    speaker: 'Carolina Mejía · Chief AI Officer, Bancolombia',
+    description: 'Most companies launch AI pilots successfully but struggle to scale. This session shares a proven framework for moving from experimentation to enterprise-wide deployment.',
+    track: 'Strategy Track',
   },
   {
     time: '12:00 PM',
-    title: 'Lunch + Open Networking',
+    title: 'Networking Lunch',
     speaker: null,
-    description: 'Grab a meal and connect with fellow attendees. Structured roundtables available in Hall B.',
+    description: 'Enjoy lunch and connect with fellow attendees, speakers, and EPAM team members in an informal setting.',
     track: 'Break',
   },
   {
     time: '1:30 PM',
-    title: 'Platform Engineering at 100x Scale',
-    speaker: 'Sofia Reyes · VP Engineering, CloudNative Co.',
-    description: 'How to build internal developer platforms that teams actually adopt — and how to measure their impact on velocity and reliability.',
-    track: 'Platform Track',
+    title: 'Workshop: Build Your AI Roadmap in 90 Minutes',
+    speaker: 'Valentina Ruiz · Head of Data & AI, Rappi',
+    description: 'An interactive working session where you will map your business goals to specific AI use cases and walk away with a prioritized roadmap ready to present to your team.',
+    track: 'Workshop',
   },
   {
     time: '3:00 PM',
-    title: 'LLMs in Production: What Nobody Told You',
-    speaker: 'James Wu · AI Infrastructure Lead, Anthropic',
-    description: 'Real-world deployment challenges: latency, cost, evals, prompt injection, and the operational maturity model for AI systems.',
-    track: 'AI Track',
-  },
-  {
-    time: '5:00 PM',
-    title: 'Closing Panel + Happy Hour',
+    title: 'Case Study Showcase & Closing Panel',
     speaker: 'All Featured Speakers',
-    description: "An open Q&A with the day's speakers, followed by a sponsored happy hour on the rooftop terrace.",
+    description: "Three companies share their real AI transformation stories — the wins, the failures, and the lessons learned — followed by an open Q&A with the day's speakers.",
     track: 'Main Stage',
   },
 ];
 
 const TRACK_COLORS = {
   'Main Stage': '#00f5d4',
-  'Engineering Track': '#7b2ff7',
-  'Platform Track': '#3b82f6',
-  'AI Track': '#f59e0b',
+  'Strategy Track': '#7b2ff7',
+  'Workshop': '#3b82f6',
   'Break': '#6b7280',
 };
 
@@ -55,10 +47,10 @@ export default function Program() {
   return (
     <section id="program">
       <div className="container">
-        <p className="section-label">Day 1 · October 17</p>
+        <p className="section-label">November 20, 2026</p>
         <h2 className="section-title">Program Schedule</h2>
         <p className="section-subtitle" style={{ marginBottom: '48px' }}>
-          A full day of back-to-back sessions across four parallel tracks.
+          A full day of keynotes, strategy sessions, and hands-on workshops.
         </p>
         <div className="timeline">
           {SCHEDULE.map((item, i) => (

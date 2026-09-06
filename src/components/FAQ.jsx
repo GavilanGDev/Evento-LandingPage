@@ -2,24 +2,24 @@ import { useState } from 'react';
 
 const FAQS = [
   {
-    q: 'Where is NeonStack Summit 2026 held?',
-    a: 'The event takes place at the Moscone West Convention Center in San Francisco, CA, on October 17–18, 2026. The venue is easily accessible by BART, Muni, and ride-share services, with several partner hotels nearby offering discounted rates for attendees.',
+    q: 'Where exactly is the event located?',
+    a: 'The AI Business Summit 2026 takes place at the EPAM Systems office in Bogotá, Colombia. The exact address and directions will be sent to registered attendees by email one week before the event. The venue is located in the Chicó Norte business district and is accessible by TransMilenio, taxi, and ride-share services.',
   },
   {
-    q: 'What is included in the registration fee?',
-    a: 'Your ticket covers full access to all keynotes, breakout sessions, and workshops across both days. Also included: breakfast, lunch, and coffee breaks each day, plus the closing happy hour on Day 1. Workshop materials and digital copies of all slide decks are included as well.',
+    q: 'Is there a registration fee?',
+    a: 'Attendance is free for all registered participants. Seats are limited, so we encourage you to register early to guarantee your spot. Registration includes access to all sessions and workshops, lunch, coffee breaks, and digital copies of all presentation materials.',
   },
   {
-    q: 'Is there a virtual / remote attendance option?',
-    a: 'Yes! We offer a live-stream ticket that gives you access to all Main Stage sessions and selected breakout talks in real time. Virtual attendees also get 60-day on-demand access to all recorded sessions after the event ends.',
+    q: 'Who should attend this summit?',
+    a: 'The summit is designed for business executives, technology leaders, and professionals who want to understand how AI can drive value in their organizations. You do not need a technical background to benefit — the content is focused on strategy, decision-making, and real-world applications rather than programming or data science.',
   },
   {
-    q: 'Can I get a refund if I can no longer attend?',
-    a: 'Full refunds are available up to 30 days before the event (September 17, 2026). Between 30 and 14 days out, we offer a 50% refund or a free transfer of your ticket to another person. No refunds are issued within 14 days of the event, but ticket transfers remain available at no charge.',
+    q: 'Will the sessions be recorded?',
+    a: 'Yes. All keynotes and panel sessions will be recorded and made available to registered attendees within one week after the event. Hands-on workshop content will not be recorded to preserve the interactive nature of those sessions.',
   },
   {
-    q: 'How do I submit a talk or workshop proposal?',
-    a: 'Our CFP (Call for Papers) is open until July 31, 2026. Head to the Speak page on our website to submit your proposal. We welcome submissions of all kinds — case studies, deep dives, live demos, and hands-on workshops. All submissions are reviewed by our technical committee and we notify all applicants within four weeks of the deadline.',
+    q: 'What language will the sessions be in?',
+    a: 'All sessions will be delivered in Spanish. Some presentation materials and resources may also be available in English upon request.',
   },
 ];
 
@@ -36,7 +36,7 @@ export default function FAQ() {
         <p className="section-label">FAQ</p>
         <h2 className="section-title">Frequently asked questions</h2>
         <p className="section-subtitle" style={{ marginBottom: '48px' }}>
-          Can't find the answer you need? Email us at hello@neonstack.dev
+          Still have questions? Write to us at summit@epam.com
         </p>
         <div className="faq-list">
           {FAQS.map((item, i) => (
