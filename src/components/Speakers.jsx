@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useLanguage } from '../LanguageContext';
 
 function LinkedInIcon() {
   return (
@@ -16,54 +17,7 @@ function TwitterIcon() {
   );
 }
 
-const SPEAKERS = [
-  {
-    name: 'Andrés Torres',
-    title: 'VP of Digital Transformation',
-    company: 'EPAM Systems',
-    initials: 'AT',
-    color: '#00f5d4',
-    talk: 'AI and the Future of Business in Latin America',
-    bio: "Andrés leads EPAM's digital transformation practice across Latin America, helping organizations adopt AI and cloud technologies at enterprise scale. With over 15 years in technology consulting, he has guided more than 50 companies through complex digital transitions and is recognized as one of the region's most influential voices in enterprise AI adoption.",
-    linkedin: 'https://linkedin.com',
-    twitter: 'https://x.com',
-  },
-  {
-    name: 'Carolina Mejía',
-    title: 'Chief AI Officer',
-    company: 'Bancolombia',
-    initials: 'CM',
-    color: '#7b2ff7',
-    talk: 'From Pilot to Production: Scaling AI Across the Enterprise',
-    bio: "Carolina oversees AI strategy and implementation at one of Colombia's largest banks, where her team has deployed machine learning models that serve millions of customers daily. She is a frequent speaker on responsible AI and financial inclusion, and sits on the advisory board of two AI ethics organizations in Latin America.",
-    linkedin: 'https://linkedin.com',
-    twitter: 'https://x.com',
-  },
-  {
-    name: 'Valentina Ruiz',
-    title: 'Head of Data & AI',
-    company: 'Rappi',
-    initials: 'VR',
-    color: '#3b82f6',
-    talk: 'Workshop: Build Your AI Roadmap in 90 Minutes',
-    bio: "Valentina built Rappi's data and AI platform from the ground up, scaling it to process tens of millions of transactions per day across 9 countries. She is passionate about making data-driven decision-making accessible to every team in the organization, and has spoken at DataSummit, AI Latam, and AWS re:Invent.",
-    linkedin: 'https://linkedin.com',
-    twitter: 'https://x.com',
-  },
-  {
-    name: 'Sebastián Gómez',
-    title: 'Founder & CEO',
-    company: 'Latam AI Ventures',
-    initials: 'SG',
-    color: '#f59e0b',
-    talk: 'Investing in AI: What Founders and Executives Need to Know',
-    bio: "Sebastián founded Latam AI Ventures to invest in and accelerate AI startups across the region. A former engineer turned entrepreneur, he has backed over 30 AI companies in Colombia, Mexico, and Brazil, advises governments on national AI policy, and was named one of Forbes Colombia's 30 Under 40.",
-    linkedin: 'https://linkedin.com',
-    twitter: 'https://x.com',
-  },
-];
-
-function SpeakerModal({ speaker, onClose }) {
+function SpeakerModal({ speaker, speakingOnLabel, onClose }) {
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     function onKey(e) {
@@ -104,7 +58,7 @@ function SpeakerModal({ speaker, onClose }) {
         </div>
 
         <div className="modal-talk">
-          <span className="modal-talk-label">Speaking on</span>
+          <span className="modal-talk-label">{speakingOnLabel}</span>
           <p className="modal-talk-title">"{speaker.talk}"</p>
         </div>
 
@@ -115,38 +69,41 @@ function SpeakerModal({ speaker, onClose }) {
 }
 
 export default function Speakers() {
+  const { t } = useLanguage();
+  const s = t.speakers;
   const [modal, setModal] = useState(null);
 
   return (
     <section id="speakers">
       <div className="container">
-        <p className="section-label">Featured Speakers</p>
-        <h2 className="section-title">Learn from the best</h2>
-        <p className="section-subtitle" style={{ marginBottom: '48px' }}>
-          Practitioners and leaders who are building and scaling AI in the real world.
+        <p className="section-label animate-item" style={{ '--delay': '0s' }}>{s.label}</p>
+        <h2 className="section-title animate-item" style={{ '--delay': '0.1s' }}>{s.title}</h2>
+        <p className="section-subtitle animate-item" style={{ '--delay': '0.2s', marginBottom: '48px' }}>
+          {s.subtitle}
         </p>
         <div className="speakers-grid">
-          {SPEAKERS.map((s) => (
+          {s.people.map((person, i) => (
             <div
-              key={s.name}
-              className="speaker-card"
-              onClick={() => setModal(s)}
+              key={person.name}
+              className="speaker-card animate-item"
+              style={{ '--delay': `${0.3 + i * 0.1}s` }}
+              onClick={() => setModal(person)}
               role="button"
               tabIndex={0}
-              onKeyDown={e => e.key === 'Enter' && setModal(s)}
-              aria-label={`View profile for ${s.name}`}
+              onKeyDown={e => e.key === 'Enter' && setModal(person)}
+              aria-label={`View profile for ${person.name}`}
             >
               <div className="speaker-front">
                 <div
                   className="speaker-avatar"
-                  style={{ background: s.color + '22', borderColor: s.color + '55' }}
+                  style={{ background: person.color + '22', borderColor: person.color + '55' }}
                 >
-                  <span style={{ color: s.color }}>{s.initials}</span>
+                  <span style={{ color: person.color }}>{person.initials}</span>
                 </div>
-                <h3 className="speaker-name">{s.name}</h3>
+                <h3 className="speaker-name">{person.name}</h3>
                 <div className="speaker-socials">
                   <a
-                    href={s.linkedin}
+                    href={person.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-link"
@@ -156,7 +113,7 @@ export default function Speakers() {
                     <LinkedInIcon />
                   </a>
                   <a
-                    href={s.twitter}
+                    href={person.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-link"
@@ -166,21 +123,27 @@ export default function Speakers() {
                     <TwitterIcon />
                   </a>
                 </div>
-                <p className="speaker-title">{s.title}</p>
-                <p className="speaker-company" style={{ color: s.color }}>{s.company}</p>
-                <p className="speaker-hint">Click for full profile →</p>
+                <p className="speaker-title">{person.title}</p>
+                <p className="speaker-company" style={{ color: person.color }}>{person.company}</p>
+                <p className="speaker-hint">{s.hint}</p>
               </div>
 
               <div className="speaker-bio-overlay">
-                <p className="speaker-bio-text">{s.bio}</p>
-                <span className="speaker-bio-cta">Open full profile →</span>
+                <p className="speaker-bio-text">{person.bio}</p>
+                <span className="speaker-bio-cta">{s.bioCta}</span>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {modal && <SpeakerModal speaker={modal} onClose={() => setModal(null)} />}
+      {modal && (
+        <SpeakerModal
+          speaker={modal}
+          speakingOnLabel={s.speakingOn}
+          onClose={() => setModal(null)}
+        />
+      )}
     </section>
   );
 }

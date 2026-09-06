@@ -1,13 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
+import { useLanguage } from '../LanguageContext';
 
-const PHOTOS = [
-  { id: 10,  caption: 'Opening Keynote' },
-  { id: 20,  caption: 'Networking Lunch' },
-  { id: 30,  caption: 'Workshop in Action' },
-  { id: 40,  caption: 'Panel Discussion' },
-  { id: 50,  caption: 'Evening Reception' },
-  { id: 60,  caption: 'Hands-on Lab' },
-];
+const PHOTO_IDS = [10, 20, 30, 40, 50, 60];
 
 function photoUrl(id, width, height) {
   return `https://picsum.photos/id/${id}/${width}/${height}`;
@@ -64,29 +58,34 @@ function Lightbox({ photos, index, onClose, onPrev, onNext }) {
 }
 
 export default function Gallery() {
+  const { t } = useLanguage();
+  const g = t.gallery;
+
+  const photos = PHOTO_IDS.map((id, i) => ({ id, caption: g.captions[i] }));
+
   const [activeIndex, setActiveIndex] = useState(null);
 
   const isOpen = activeIndex !== null;
-
   const open  = (i) => setActiveIndex(i);
   const close = useCallback(() => setActiveIndex(null), []);
-  const prev  = useCallback(() => setActiveIndex(i => (i - 1 + PHOTOS.length) % PHOTOS.length), []);
-  const next  = useCallback(() => setActiveIndex(i => (i + 1) % PHOTOS.length), []);
+  const prev  = useCallback(() => setActiveIndex(i => (i - 1 + PHOTO_IDS.length) % PHOTO_IDS.length), []);
+  const next  = useCallback(() => setActiveIndex(i => (i + 1) % PHOTO_IDS.length), []);
 
   return (
     <section id="gallery">
       <div className="container">
-        <p className="section-label">Past Events</p>
-        <h2 className="section-title">Moments from previous summits</h2>
-        <p className="section-subtitle" style={{ marginBottom: '48px' }}>
-          A look at what happens when great minds gather in one room.
+        <p className="section-label animate-item" style={{ '--delay': '0s' }}>{g.label}</p>
+        <h2 className="section-title animate-item" style={{ '--delay': '0.1s' }}>{g.title}</h2>
+        <p className="section-subtitle animate-item" style={{ '--delay': '0.2s', marginBottom: '48px' }}>
+          {g.subtitle}
         </p>
 
         <div className="gallery-grid">
-          {PHOTOS.map((photo, i) => (
+          {photos.map((photo, i) => (
             <button
               key={photo.id}
-              className="gallery-item"
+              className="gallery-item animate-item"
+              style={{ '--delay': `${0.3 + i * 0.07}s` }}
               onClick={() => open(i)}
               aria-label={`Open photo: ${photo.caption}`}
             >
@@ -107,7 +106,7 @@ export default function Gallery() {
 
       {isOpen && (
         <Lightbox
-          photos={PHOTOS}
+          photos={photos}
           index={activeIndex}
           onClose={close}
           onPrev={prev}

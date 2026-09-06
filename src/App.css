@@ -59,6 +59,28 @@ section:nth-child(even) {
   max-width: 600px;
 }
 
+/* ── Scroll animations ──────────────────────────────────── */
+.animate-item {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.55s ease var(--delay, 0s),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1) var(--delay, 0s);
+}
+
+.animate-item.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 @media (max-width: 768px) {
   section {
     padding: 60px 20px;

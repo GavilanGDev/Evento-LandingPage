@@ -1,4 +1,5 @@
 import { useState, useEffect, Fragment } from 'react';
+import { useLanguage } from '../LanguageContext';
 
 const EVENT_DATE = new Date('2026-11-20T09:00:00-05:00');
 
@@ -14,6 +15,7 @@ function getTimeLeft() {
 }
 
 export default function Hero() {
+  const { t } = useLanguage();
   const [timeLeft, setTimeLeft] = useState(getTimeLeft);
 
   useEffect(() => {
@@ -27,10 +29,10 @@ export default function Hero() {
 
   const units = timeLeft
     ? [
-        { label: 'Days',    value: timeLeft.days },
-        { label: 'Hours',   value: timeLeft.hours },
-        { label: 'Minutes', value: timeLeft.minutes },
-        { label: 'Seconds', value: timeLeft.seconds },
+        { label: t.hero.days,    value: timeLeft.days },
+        { label: t.hero.hours,   value: timeLeft.hours },
+        { label: t.hero.minutes, value: timeLeft.minutes },
+        { label: t.hero.seconds, value: timeLeft.seconds },
       ]
     : null;
 
@@ -38,27 +40,27 @@ export default function Hero() {
     <section className="hero">
       <div className="hero-bg-glow" />
       <div className="container hero-content">
-        <span className="hero-tag">November 20, 2026 · EPAM Office, Bogotá</span>
-        <h1 className="hero-title">
+        <span className="hero-tag animate-item" style={{ '--delay': '0s' }}>
+          {t.hero.tag}
+        </span>
+        <h1 className="hero-title animate-item" style={{ '--delay': '0.1s' }}>
           AI Business<br />
           <span className="hero-title-accent">Summit 2026</span>
         </h1>
-        <p className="hero-description">
-          A one-day gathering of business leaders and technology professionals
-          exploring the practical impact of artificial intelligence on enterprises
-          across Latin America.
+        <p className="hero-description animate-item" style={{ '--delay': '0.2s' }}>
+          {t.hero.description}
         </p>
-        <div className="hero-actions">
+        <div className="hero-actions animate-item" style={{ '--delay': '0.3s' }}>
           <button className="btn-primary" onClick={scrollToRegistration}>
-            Register Now →
+            {t.hero.btnRegister}
           </button>
-          <a href="#program" className="btn-ghost">View Schedule</a>
+          <a href="#program" className="btn-ghost">{t.hero.btnSchedule}</a>
         </div>
 
-        <div className="hero-countdown">
+        <div className="hero-countdown animate-item" style={{ '--delay': '0.4s' }}>
           {units ? (
             <>
-              <p className="countdown-heading">Event starts in</p>
+              <p className="countdown-heading">{t.hero.countdownHeading}</p>
               <div className="countdown-units">
                 {units.map(({ label, value }, i) => (
                   <Fragment key={label}>
@@ -76,24 +78,24 @@ export default function Hero() {
               </div>
             </>
           ) : (
-            <p className="countdown-started">Event has started!</p>
+            <p className="countdown-started">{t.hero.countdownStarted}</p>
           )}
         </div>
 
-        <div className="hero-stats">
+        <div className="hero-stats animate-item" style={{ '--delay': '0.5s' }}>
           <div className="hero-stat">
             <span className="hero-stat-number">200+</span>
-            <span className="hero-stat-label">Attendees</span>
+            <span className="hero-stat-label">{t.hero.statAttendees}</span>
           </div>
           <div className="hero-stat-divider" />
           <div className="hero-stat">
             <span className="hero-stat-number">10+</span>
-            <span className="hero-stat-label">Speakers</span>
+            <span className="hero-stat-label">{t.hero.statSpeakers}</span>
           </div>
           <div className="hero-stat-divider" />
           <div className="hero-stat">
             <span className="hero-stat-number">1</span>
-            <span className="hero-stat-label">Day</span>
+            <span className="hero-stat-label">{t.hero.statDay}</span>
           </div>
         </div>
       </div>

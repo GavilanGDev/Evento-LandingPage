@@ -1,4 +1,8 @@
+import { useLanguage } from '../LanguageContext';
+
 export default function Navbar() {
+  const { language, t, toggle } = useLanguage();
+
   function scrollToRegistration() {
     document.getElementById('registration').scrollIntoView({ behavior: 'smooth' });
   }
@@ -10,14 +14,19 @@ export default function Navbar() {
           AI Business <span>Summit</span>
         </a>
         <div className="navbar-links">
-          <a href="#about">About</a>
-          <a href="#program">Schedule</a>
-          <a href="#speakers">Speakers</a>
-          <a href="#faq">FAQ</a>
+          <a href="#about">{t.nav.about}</a>
+          <a href="#program">{t.nav.schedule}</a>
+          <a href="#speakers">{t.nav.speakers}</a>
+          <a href="#faq">{t.nav.faq}</a>
         </div>
-        <button className="navbar-cta" onClick={scrollToRegistration}>
-          Register
-        </button>
+        <div className="navbar-right">
+          <button className="lang-toggle" onClick={toggle} aria-label="Switch language">
+            {language === 'es' ? 'EN' : 'ES'}
+          </button>
+          <button className="navbar-cta" onClick={scrollToRegistration}>
+            {t.nav.register}
+          </button>
+        </div>
       </div>
     </nav>
   );

@@ -1,0 +1,423 @@
+export const translations = {
+  en: {
+    nav: {
+      about: 'About',
+      schedule: 'Schedule',
+      speakers: 'Speakers',
+      faq: 'FAQ',
+      register: 'Register',
+    },
+    hero: {
+      tag: 'November 20, 2026 · EPAM Office, Bogotá',
+      description:
+        'A one-day gathering of business leaders and technology professionals exploring the practical impact of artificial intelligence on enterprises across Latin America.',
+      btnRegister: 'Register Now →',
+      btnSchedule: 'View Schedule',
+      countdownHeading: 'Event starts in',
+      countdownStarted: 'Event has started!',
+      days: 'Days',
+      hours: 'Hours',
+      minutes: 'Minutes',
+      seconds: 'Seconds',
+      statAttendees: 'Attendees',
+      statSpeakers: 'Speakers',
+      statDay: 'Day',
+    },
+    about: {
+      label: 'About the Event',
+      title: 'AI that works\nfor your business',
+      body1:
+        'AI Business Summit 2026 is a one-day event that brings together executives, business leaders, and technology professionals to explore how artificial intelligence is reshaping industries across Latin America.',
+      body2:
+        "Hosted at EPAM's Bogotá office on November 20, the summit focuses on practical AI adoption — from building your first AI strategy to scaling intelligent systems across the enterprise. Every session is designed to deliver actionable insights you can take back to your organization the very next day.",
+      body3:
+        'Whether you are a business executive evaluating AI investments, a technology leader driving transformation, or a practitioner building AI-powered products, this is the event to connect, learn, and accelerate your journey.',
+      highlights: [
+        { icon: '🤖', title: 'Practical AI focus', desc: 'Real use cases and lessons from companies already running AI in production' },
+        { icon: '🌎', title: 'Latin America context', desc: 'Content tailored to the challenges and opportunities of our region' },
+        { icon: '🤝', title: 'Executive networking', desc: 'Connect with peers and decision-makers shaping AI strategy today' },
+        { icon: '🗺️', title: 'Your AI roadmap', desc: 'Leave with a concrete plan and the tools to start executing immediately' },
+      ],
+    },
+    program: {
+      label: 'November 20, 2026',
+      title: 'Program Schedule',
+      subtitle: 'A full day of keynotes, strategy sessions, and hands-on workshops.',
+      tracks: {
+        'Main Stage': 'Main Stage',
+        'Strategy Track': 'Strategy Track',
+        'Workshop': 'Workshop',
+        'Break': 'Break',
+      },
+      sessions: [
+        {
+          time: '9:00 AM',
+          title: 'Opening Keynote: AI and the Future of Business in Latin America',
+          speaker: 'Andrés Torres · VP of Digital Transformation, EPAM Systems',
+          description:
+            'A panoramic view of how artificial intelligence is disrupting industries across the region — and what business leaders must do today to stay ahead of the curve.',
+          track: 'Main Stage',
+        },
+        {
+          time: '10:30 AM',
+          title: 'From Pilot to Production: Scaling AI Across the Enterprise',
+          speaker: 'Carolina Mejía · Chief AI Officer, Bancolombia',
+          description:
+            'Most companies launch AI pilots successfully but struggle to scale. This session shares a proven framework for moving from experimentation to enterprise-wide deployment.',
+          track: 'Strategy Track',
+        },
+        {
+          time: '12:00 PM',
+          title: 'Networking Lunch',
+          speaker: null,
+          description:
+            'Enjoy lunch and connect with fellow attendees, speakers, and EPAM team members in an informal setting.',
+          track: 'Break',
+        },
+        {
+          time: '1:30 PM',
+          title: 'Workshop: Build Your AI Roadmap in 90 Minutes',
+          speaker: 'Valentina Ruiz · Head of Data & AI, Rappi',
+          description:
+            'An interactive working session where you will map your business goals to specific AI use cases and walk away with a prioritized roadmap ready to present to your team.',
+          track: 'Workshop',
+        },
+        {
+          time: '3:00 PM',
+          title: 'Case Study Showcase & Closing Panel',
+          speaker: 'All Featured Speakers',
+          description:
+            "Three companies share their real AI transformation stories — the wins, the failures, and the lessons learned — followed by an open Q&A with the day's speakers.",
+          track: 'Main Stage',
+        },
+      ],
+    },
+    speakers: {
+      label: 'Featured Speakers',
+      title: 'Learn from the best',
+      subtitle: 'Practitioners and leaders who are building and scaling AI in the real world.',
+      hint: 'Click for full profile →',
+      bioCta: 'Open full profile →',
+      speakingOn: 'Speaking on',
+      people: [
+        {
+          name: 'Andrés Torres',
+          title: 'VP of Digital Transformation',
+          company: 'EPAM Systems',
+          initials: 'AT',
+          color: '#00f5d4',
+          talk: 'AI and the Future of Business in Latin America',
+          bio: "Andrés leads EPAM's digital transformation practice across Latin America, helping organizations adopt AI and cloud technologies at enterprise scale. With over 15 years in technology consulting, he has guided more than 50 companies through complex digital transitions and is recognized as one of the region's most influential voices in enterprise AI adoption.",
+          linkedin: 'https://linkedin.com',
+          twitter: 'https://x.com',
+        },
+        {
+          name: 'Carolina Mejía',
+          title: 'Chief AI Officer',
+          company: 'Bancolombia',
+          initials: 'CM',
+          color: '#7b2ff7',
+          talk: 'From Pilot to Production: Scaling AI Across the Enterprise',
+          bio: "Carolina oversees AI strategy and implementation at one of Colombia's largest banks, where her team has deployed machine learning models that serve millions of customers daily. She is a frequent speaker on responsible AI and financial inclusion, and sits on the advisory board of two AI ethics organizations in Latin America.",
+          linkedin: 'https://linkedin.com',
+          twitter: 'https://x.com',
+        },
+        {
+          name: 'Valentina Ruiz',
+          title: 'Head of Data & AI',
+          company: 'Rappi',
+          initials: 'VR',
+          color: '#3b82f6',
+          talk: 'Workshop: Build Your AI Roadmap in 90 Minutes',
+          bio: "Valentina built Rappi's data and AI platform from the ground up, scaling it to process tens of millions of transactions per day across 9 countries. She is passionate about making data-driven decision-making accessible to every team in the organization, and has spoken at DataSummit, AI Latam, and AWS re:Invent.",
+          linkedin: 'https://linkedin.com',
+          twitter: 'https://x.com',
+        },
+        {
+          name: 'Sebastián Gómez',
+          title: 'Founder & CEO',
+          company: 'Latam AI Ventures',
+          initials: 'SG',
+          color: '#f59e0b',
+          talk: 'Investing in AI: What Founders and Executives Need to Know',
+          bio: "Sebastián founded Latam AI Ventures to invest in and accelerate AI startups across the region. A former engineer turned entrepreneur, he has backed over 30 AI companies in Colombia, Mexico, and Brazil, advises governments on national AI policy, and was named one of Forbes Colombia's 30 Under 40.",
+          linkedin: 'https://linkedin.com',
+          twitter: 'https://x.com',
+        },
+      ],
+    },
+    faq: {
+      label: 'FAQ',
+      title: 'Frequently asked questions',
+      subtitle: 'Still have questions? Write to us at summit@epam.com',
+      items: [
+        {
+          q: 'Where exactly is the event located?',
+          a: 'The AI Business Summit 2026 takes place at the EPAM Systems office in Bogotá, Colombia. The exact address and directions will be sent to registered attendees by email one week before the event. The venue is located in the Chicó Norte business district and is accessible by TransMilenio, taxi, and ride-share services.',
+        },
+        {
+          q: 'Is there a registration fee?',
+          a: 'Attendance is free for all registered participants. Seats are limited, so we encourage you to register early to guarantee your spot. Registration includes access to all sessions and workshops, lunch, coffee breaks, and digital copies of all presentation materials.',
+        },
+        {
+          q: 'Who should attend this summit?',
+          a: 'The summit is designed for business executives, technology leaders, and professionals who want to understand how AI can drive value in their organizations. You do not need a technical background to benefit — the content is focused on strategy, decision-making, and real-world applications rather than programming or data science.',
+        },
+        {
+          q: 'Will the sessions be recorded?',
+          a: 'Yes. All keynotes and panel sessions will be recorded and made available to registered attendees within one week after the event. Hands-on workshop content will not be recorded to preserve the interactive nature of those sessions.',
+        },
+        {
+          q: 'What language will the sessions be in?',
+          a: 'All sessions will be delivered in Spanish. Some presentation materials and resources may also be available in English upon request.',
+        },
+      ],
+    },
+    gallery: {
+      label: 'Past Events',
+      title: 'Moments from previous summits',
+      subtitle: 'A look at what happens when great minds gather in one room.',
+      captions: [
+        'Opening Keynote',
+        'Networking Lunch',
+        'Workshop in Action',
+        'Panel Discussion',
+        'Evening Reception',
+        'Hands-on Lab',
+      ],
+    },
+    registration: {
+      label: 'Register',
+      title: 'Secure your spot',
+      subtitle: 'Seats are limited. Register now to guarantee your place at AI Business Summit 2026.',
+      nameLabel: 'Full Name',
+      namePlaceholder: 'Jane Smith',
+      emailLabel: 'Email Address',
+      emailPlaceholder: 'jane@company.com',
+      companyLabel: 'Company / Organization',
+      companyPlaceholder: 'Acme Corp',
+      submitBtn: 'Register for Free →',
+      errName: 'Please enter your full name.',
+      errEmailRequired: 'Please enter your email address.',
+      errEmailInvalid: 'Please enter a valid email address.',
+      errCompany: 'Please enter your company or organization.',
+      successTitle: "You're registered!",
+      successText: (name, email) =>
+        `Welcome, ${name}! We've sent a confirmation to ${email}. We can't wait to see you in Bogotá!`,
+    },
+    footer: {
+      copy: '© 2026 AI Business Summit. All rights reserved.',
+    },
+  },
+
+  es: {
+    nav: {
+      about: 'Acerca',
+      schedule: 'Agenda',
+      speakers: 'Ponentes',
+      faq: 'FAQ',
+      register: 'Registrarse',
+    },
+    hero: {
+      tag: '20 de noviembre, 2026 · Oficina EPAM, Bogotá',
+      description:
+        'Un evento de un día que reúne a líderes empresariales y profesionales de tecnología para explorar el impacto práctico de la inteligencia artificial en las empresas de América Latina.',
+      btnRegister: 'Regístrate Ahora →',
+      btnSchedule: 'Ver Agenda',
+      countdownHeading: 'El evento comienza en',
+      countdownStarted: '¡El evento ha comenzado!',
+      days: 'Días',
+      hours: 'Horas',
+      minutes: 'Minutos',
+      seconds: 'Segundos',
+      statAttendees: 'Asistentes',
+      statSpeakers: 'Ponentes',
+      statDay: 'Día',
+    },
+    about: {
+      label: 'Sobre el Evento',
+      title: 'IA que funciona\npara tu negocio',
+      body1:
+        'AI Business Summit 2026 es un evento de un día que reúne a ejecutivos, líderes empresariales y profesionales de tecnología para explorar cómo la inteligencia artificial está transformando las industrias en América Latina.',
+      body2:
+        'Organizado en la oficina de EPAM en Bogotá el 20 de noviembre, el summit se enfoca en la adopción práctica de IA — desde la construcción de tu primera estrategia de IA hasta escalar sistemas inteligentes en toda la empresa. Cada sesión está diseñada para entregar conocimientos accionables que puedes aplicar en tu organización al día siguiente.',
+      body3:
+        'Ya seas un ejecutivo evaluando inversiones en IA, un líder tecnológico impulsando la transformación, o un profesional desarrollando productos con IA, este es el evento para conectar, aprender y acelerar tu camino.',
+      highlights: [
+        { icon: '🤖', title: 'Enfoque práctico en IA', desc: 'Casos de uso reales y lecciones de empresas que ya ejecutan IA en producción' },
+        { icon: '🌎', title: 'Contexto latinoamericano', desc: 'Contenido diseñado para los retos y oportunidades de nuestra región' },
+        { icon: '🤝', title: 'Red ejecutiva', desc: 'Conéctate con pares y tomadores de decisiones que lideran la estrategia de IA hoy' },
+        { icon: '🗺️', title: 'Tu hoja de ruta de IA', desc: 'Sal con un plan concreto y las herramientas para empezar a ejecutar de inmediato' },
+      ],
+    },
+    program: {
+      label: '20 de noviembre, 2026',
+      title: 'Programa',
+      subtitle: 'Un día completo de keynotes, sesiones estratégicas y talleres prácticos.',
+      tracks: {
+        'Main Stage': 'Escenario Principal',
+        'Strategy Track': 'Track Estrategia',
+        'Workshop': 'Taller',
+        'Break': 'Descanso',
+      },
+      sessions: [
+        {
+          time: '9:00 AM',
+          title: 'Keynote de Apertura: La IA y el Futuro de los Negocios en América Latina',
+          speaker: 'Andrés Torres · VP de Transformación Digital, EPAM Systems',
+          description:
+            'Una visión panorámica de cómo la inteligencia artificial está disrumpiendo industrias en la región — y qué deben hacer hoy los líderes empresariales para mantenerse a la vanguardia.',
+          track: 'Main Stage',
+        },
+        {
+          time: '10:30 AM',
+          title: 'Del Piloto a la Producción: Escalando IA en la Empresa',
+          speaker: 'Carolina Mejía · Chief AI Officer, Bancolombia',
+          description:
+            'La mayoría de las empresas lanzan pilotos de IA con éxito, pero tienen dificultades para escalar. Esta sesión comparte un marco probado para pasar de la experimentación al despliegue empresarial.',
+          track: 'Strategy Track',
+        },
+        {
+          time: '12:00 PM',
+          title: 'Almuerzo de Networking',
+          speaker: null,
+          description:
+            'Disfruta el almuerzo y conéctate con otros asistentes, ponentes y miembros del equipo EPAM en un ambiente informal.',
+          track: 'Break',
+        },
+        {
+          time: '1:30 PM',
+          title: 'Taller: Construye tu Hoja de Ruta de IA en 90 Minutos',
+          speaker: 'Valentina Ruiz · Head of Data & AI, Rappi',
+          description:
+            'Una sesión de trabajo interactiva donde mapearás tus objetivos de negocio con casos de uso específicos de IA y saldrás con una hoja de ruta priorizada lista para presentar a tu equipo.',
+          track: 'Workshop',
+        },
+        {
+          time: '3:00 PM',
+          title: 'Showcase de Casos de Estudio y Panel de Cierre',
+          speaker: 'Todos los Ponentes',
+          description:
+            'Tres empresas comparten sus historias reales de transformación con IA — los éxitos, los fracasos y las lecciones aprendidas — seguido de un Q&A abierto con los ponentes del día.',
+          track: 'Main Stage',
+        },
+      ],
+    },
+    speakers: {
+      label: 'Ponentes Destacados',
+      title: 'Aprende de los mejores',
+      subtitle: 'Profesionales y líderes que están construyendo y escalando IA en el mundo real.',
+      hint: 'Clic para ver perfil →',
+      bioCta: 'Ver perfil completo →',
+      speakingOn: 'Presentará sobre',
+      people: [
+        {
+          name: 'Andrés Torres',
+          title: 'VP de Transformación Digital',
+          company: 'EPAM Systems',
+          initials: 'AT',
+          color: '#00f5d4',
+          talk: 'La IA y el Futuro de los Negocios en América Latina',
+          bio: 'Andrés lidera la práctica de transformación digital de EPAM en América Latina, ayudando a organizaciones a adoptar IA y tecnologías cloud a escala empresarial. Con más de 15 años en consultoría tecnológica, ha guiado a más de 50 empresas en transiciones digitales complejas y es reconocido como una de las voces más influyentes en la adopción de IA empresarial en la región.',
+          linkedin: 'https://linkedin.com',
+          twitter: 'https://x.com',
+        },
+        {
+          name: 'Carolina Mejía',
+          title: 'Chief AI Officer',
+          company: 'Bancolombia',
+          initials: 'CM',
+          color: '#7b2ff7',
+          talk: 'Del Piloto a la Producción: Escalando IA en la Empresa',
+          bio: 'Carolina supervisa la estrategia e implementación de IA en uno de los bancos más grandes de Colombia, donde su equipo ha desplegado modelos de machine learning que sirven a millones de clientes diariamente. Es una frecuente oradora sobre IA responsable e inclusión financiera, y forma parte del consejo asesor de dos organizaciones de ética en IA en América Latina.',
+          linkedin: 'https://linkedin.com',
+          twitter: 'https://x.com',
+        },
+        {
+          name: 'Valentina Ruiz',
+          title: 'Head of Data & AI',
+          company: 'Rappi',
+          initials: 'VR',
+          color: '#3b82f6',
+          talk: 'Taller: Construye tu Hoja de Ruta de IA en 90 Minutos',
+          bio: 'Valentina construyó la plataforma de datos e IA de Rappi desde cero, escalándola para procesar decenas de millones de transacciones por día en 9 países. Le apasiona hacer que la toma de decisiones basada en datos sea accesible para todos los equipos de la organización, y ha hablado en DataSummit, AI Latam y AWS re:Invent.',
+          linkedin: 'https://linkedin.com',
+          twitter: 'https://x.com',
+        },
+        {
+          name: 'Sebastián Gómez',
+          title: 'Fundador & CEO',
+          company: 'Latam AI Ventures',
+          initials: 'SG',
+          color: '#f59e0b',
+          talk: 'Invertir en IA: Lo que Fundadores y Ejecutivos Necesitan Saber',
+          bio: 'Sebastián fundó Latam AI Ventures para invertir y acelerar startups de IA en toda la región. Un ex ingeniero convertido en emprendedor, ha respaldado a más de 30 empresas de IA en Colombia, México y Brasil, asesora a gobiernos en política nacional de IA y fue nombrado uno de los 30 menores de 40 de Forbes Colombia.',
+          linkedin: 'https://linkedin.com',
+          twitter: 'https://x.com',
+        },
+      ],
+    },
+    faq: {
+      label: 'FAQ',
+      title: 'Preguntas frecuentes',
+      subtitle: '¿Tienes más preguntas? Escríbenos a summit@epam.com',
+      items: [
+        {
+          q: '¿Dónde se realiza el evento exactamente?',
+          a: 'El AI Business Summit 2026 se lleva a cabo en la oficina de EPAM Systems en Bogotá, Colombia. La dirección exacta y las indicaciones serán enviadas a los asistentes registrados por correo electrónico una semana antes del evento. El lugar está ubicado en el distrito empresarial de Chicó Norte y es accesible en TransMilenio, taxi y servicios de transporte por aplicación.',
+        },
+        {
+          q: '¿Tiene costo la inscripción?',
+          a: 'La asistencia es gratuita para todos los participantes registrados. Los cupos son limitados, por lo que te recomendamos registrarte con anticipación para garantizar tu lugar. La inscripción incluye acceso a todas las sesiones y talleres, almuerzo, pausas de café y copias digitales de todos los materiales de presentación.',
+        },
+        {
+          q: '¿A quién está dirigido este summit?',
+          a: 'El summit está diseñado para ejecutivos de negocios, líderes tecnológicos y profesionales que quieren entender cómo la IA puede generar valor en sus organizaciones. No necesitas conocimientos técnicos para aprovechar el evento — el contenido está enfocado en estrategia, toma de decisiones y aplicaciones del mundo real, no en programación o ciencia de datos.',
+        },
+        {
+          q: '¿Las sesiones serán grabadas?',
+          a: 'Sí. Todos los keynotes y paneles serán grabados y estarán disponibles para los asistentes registrados en el plazo de una semana después del evento. El contenido de los talleres prácticos no será grabado para preservar la naturaleza interactiva de esas sesiones.',
+        },
+        {
+          q: '¿En qué idioma serán las sesiones?',
+          a: 'Todas las sesiones se realizarán en español. Algunos materiales de presentación y recursos también podrán estar disponibles en inglés bajo solicitud.',
+        },
+      ],
+    },
+    gallery: {
+      label: 'Eventos Anteriores',
+      title: 'Momentos de cumbres anteriores',
+      subtitle: 'Un vistazo a lo que sucede cuando las grandes mentes se reúnen en un mismo lugar.',
+      captions: [
+        'Keynote de Apertura',
+        'Almuerzo de Networking',
+        'Taller en Acción',
+        'Panel de Discusión',
+        'Recepción Nocturna',
+        'Laboratorio Práctico',
+      ],
+    },
+    registration: {
+      label: 'Registro',
+      title: 'Asegura tu lugar',
+      subtitle: 'Los lugares son limitados. Regístrate ahora para garantizar tu participación en AI Business Summit 2026.',
+      nameLabel: 'Nombre Completo',
+      namePlaceholder: 'Juan García',
+      emailLabel: 'Correo Electrónico',
+      emailPlaceholder: 'juan@empresa.com',
+      companyLabel: 'Empresa / Organización',
+      companyPlaceholder: 'Mi Empresa',
+      submitBtn: 'Regístrate Gratis →',
+      errName: 'Por favor ingresa tu nombre completo.',
+      errEmailRequired: 'Por favor ingresa tu correo electrónico.',
+      errEmailInvalid: 'Por favor ingresa un correo electrónico válido.',
+      errCompany: 'Por favor ingresa tu empresa u organización.',
+      successTitle: '¡Estás registrado!',
+      successText: (name, email) =>
+        `¡Bienvenido, ${name}! Hemos enviado una confirmación a ${email}. ¡No podemos esperar para verte en Bogotá!`,
+    },
+    footer: {
+      copy: '© 2026 AI Business Summit. Todos los derechos reservados.',
+    },
+  },
+};

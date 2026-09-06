@@ -1,19 +1,23 @@
 import { useState } from 'react';
+import { useLanguage } from '../LanguageContext';
 
 export default function Registration() {
+  const { t } = useLanguage();
+  const r = t.registration;
+
   const [form, setForm] = useState({ name: '', email: '', company: '' });
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
 
   function validate() {
     const e = {};
-    if (!form.name.trim()) e.name = 'Please enter your full name.';
+    if (!form.name.trim()) e.name = r.errName;
     if (!form.email.trim()) {
-      e.email = 'Please enter your email address.';
+      e.email = r.errEmailRequired;
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
-      e.email = 'Please enter a valid email address.';
+      e.email = r.errEmailInvalid;
     }
-    if (!form.company.trim()) e.company = 'Please enter your company or organization.';
+    if (!form.company.trim()) e.company = r.errCompany;
     return e;
   }
 
@@ -35,67 +39,70 @@ export default function Registration() {
   return (
     <section id="registration">
       <div className="container">
-        <p className="section-label">Register</p>
-        <h2 className="section-title">Secure your spot</h2>
-        <p className="section-subtitle" style={{ marginBottom: '48px' }}>
-          Seats are limited. Register now to guarantee your place at NeonStack Summit 2026.
+        <p className="section-label animate-item" style={{ '--delay': '0s' }}>{r.label}</p>
+        <h2 className="section-title animate-item" style={{ '--delay': '0.1s' }}>{r.title}</h2>
+        <p className="section-subtitle animate-item" style={{ '--delay': '0.2s', marginBottom: '48px' }}>
+          {r.subtitle}
         </p>
 
         {submitted ? (
-          <div className="reg-success">
+          <div className="reg-success animate-item" style={{ '--delay': '0.3s' }}>
             <span className="reg-success-icon">✓</span>
-            <h3 className="reg-success-title">You're registered!</h3>
+            <h3 className="reg-success-title">{r.successTitle}</h3>
             <p className="reg-success-text">
-              Welcome, {form.name}! We've sent a confirmation to{' '}
-              <strong>{form.email}</strong>. We can't wait to see you in San Francisco.
+              {r.successText(form.name, form.email)}
             </p>
           </div>
         ) : (
           <form className="reg-form" onSubmit={handleSubmit} noValidate>
-            <div className="reg-field">
-              <label className="reg-label" htmlFor="name">Full Name</label>
+            <div className="reg-field animate-item" style={{ '--delay': '0.3s' }}>
+              <label className="reg-label" htmlFor="name">{r.nameLabel}</label>
               <input
                 id="name"
                 name="name"
                 type="text"
                 className={`reg-input ${errors.name ? 'reg-input--error' : ''}`}
-                placeholder="Jane Smith"
+                placeholder={r.namePlaceholder}
                 value={form.name}
                 onChange={handleChange}
               />
               {errors.name && <span className="reg-error">{errors.name}</span>}
             </div>
 
-            <div className="reg-field">
-              <label className="reg-label" htmlFor="email">Email Address</label>
+            <div className="reg-field animate-item" style={{ '--delay': '0.4s' }}>
+              <label className="reg-label" htmlFor="email">{r.emailLabel}</label>
               <input
                 id="email"
                 name="email"
                 type="email"
                 className={`reg-input ${errors.email ? 'reg-input--error' : ''}`}
-                placeholder="jane@company.com"
+                placeholder={r.emailPlaceholder}
                 value={form.email}
                 onChange={handleChange}
               />
               {errors.email && <span className="reg-error">{errors.email}</span>}
             </div>
 
-            <div className="reg-field">
-              <label className="reg-label" htmlFor="company">Company / Organization</label>
+            <div className="reg-field animate-item" style={{ '--delay': '0.5s' }}>
+              <label className="reg-label" htmlFor="company">{r.companyLabel}</label>
               <input
                 id="company"
                 name="company"
                 type="text"
                 className={`reg-input ${errors.company ? 'reg-input--error' : ''}`}
-                placeholder="Acme Corp"
+                placeholder={r.companyPlaceholder}
                 value={form.company}
                 onChange={handleChange}
               />
               {errors.company && <span className="reg-error">{errors.company}</span>}
             </div>
 
-            <button type="submit" className="btn-primary reg-submit">
-              Register for Free →
+            <button
+              type="submit"
+              className="btn-primary reg-submit animate-item"
+              style={{ '--delay': '0.6s' }}
+            >
+              {r.submitBtn}
             </button>
           </form>
         )}

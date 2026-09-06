@@ -1,5 +1,7 @@
 import './App.css';
 import './components/Navbar.css';
+import { LanguageProvider } from './LanguageContext';
+import { useScrollAnimation } from './hooks/useScrollAnimation';
 import './components/Hero.css';
 import './components/About.css';
 import './components/Program.css';
@@ -20,8 +22,9 @@ import Registration from './components/Registration';
 import Footer from './components/Footer';
 
 export default function App() {
+  useScrollAnimation();
   return (
-    <>
+    <LanguageProvider>
       <Navbar />
       <Hero />
       <About />
@@ -31,6 +34,6 @@ export default function App() {
       <Gallery />
       <Registration />
       <Footer />
-    </>
+    </LanguageProvider>
   );
 }
