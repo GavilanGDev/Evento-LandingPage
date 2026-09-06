@@ -1,10 +1,33 @@
-function App() {
-  return (
-    <div style={{ textAlign: 'center', padding: '2rem', fontFamily: 'system-ui, sans-serif' }}>
-      <h1>Event Landing Page</h1>
-      <p>Skeleton is ready. Run Claude Code to build the app.</p>
-    </div>
-  )
-}
+import './App.css';
+import './components/Navbar.css';
+import './components/Hero.css';
+import './components/About.css';
+import './components/Program.css';
+import './components/Speakers.css';
+import './components/FAQ.css';
+import './components/Registration.css';
+import './components/Footer.css';
 
-export default App
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Program from './components/Program';
+import Speakers from './components/Speakers';
+import FAQ from './components/FAQ';
+import Registration from './components/Registration';
+import Footer from './components/Footer';
+
+export default function App() {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <About />
+      <Program />
+      <Speakers />
+      <FAQ />
+      <Registration />
+      <Footer />
+    </>
+  );
+}
