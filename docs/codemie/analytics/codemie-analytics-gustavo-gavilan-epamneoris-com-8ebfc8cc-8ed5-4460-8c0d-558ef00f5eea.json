@@ -1,0 +1,380 @@
+{
+  "meta": {
+    "generatedAt": "2026-09-06T04:15:52.446Z",
+    "rangeLabel": "all",
+    "agents": [
+      "claude"
+    ],
+    "projectFilter": "all",
+    "totals": {
+      "sessions": 1,
+      "durationMs": 0,
+      "turns": 351,
+      "files": 37,
+      "netLines": 7349,
+      "toolCallsTotal": 378,
+      "toolSuccessRate": 97.6,
+      "totalCostUSD": 10.4303448,
+      "cacheReadCostUSD": 4.5268728,
+      "pricedSessions": 1
+    },
+    "unpricedModels": [],
+    "coverage": [
+      {
+        "agentName": "claude",
+        "total": 1,
+        "priced": 1,
+        "withLog": 1
+      }
+    ],
+    "userEmail": "gustavo_gavilan@epamneoris.com",
+    "periodStart": "2026-09-06T03:46:20.943Z",
+    "periodEnd": "2026-09-06T03:46:20.943Z"
+  },
+  "sessions": [
+    {
+      "sessionId": "8ebfc8cc-8ed5-4460-8c0d-558ef00f5eea",
+      "agentName": "claude",
+      "provider": "ai-run-sso",
+      "title": "I want to create a landing page for an event, with information about the event, the agenda, speakers, FAQ, and a registration form. Check the AGENTS.md file for details. Before writing any code, ask me questions about the event and what I need; use simple, non-technical language. Then propose a plan and develop it step by step.",
+      "project": "/Users/gustavoenriquegavilanmurcia/Desktop/landing-page",
+      "branch": "main",
+      "startTime": 1788666380943,
+      "durationMs": 0,
+      "turns": 351,
+      "fileOps": 37,
+      "linesAdded": 7395,
+      "linesRemoved": 46,
+      "linesModified": 0,
+      "netLines": 7349,
+      "filesChanged": 20,
+      "filesWritten": 20,
+      "filesEdited": 8,
+      "toolCallsTotal": 378,
+      "toolCallsSuccess": 369,
+      "toolCallsFailure": 9,
+      "models": [
+        "claude-sonnet-4-6"
+      ],
+      "languages": [
+        "javascript",
+        "markdown"
+      ],
+      "tools": [
+        {
+          "toolName": "Bash",
+          "totalCalls": 92,
+          "successCount": 83,
+          "failureCount": 9,
+          "successRate": 90.21739130434783
+        },
+        {
+          "toolName": "Write",
+          "totalCalls": 91,
+          "successCount": 91,
+          "failureCount": 0,
+          "successRate": 100
+        },
+        {
+          "toolName": "Read",
+          "totalCalls": 86,
+          "successCount": 86,
+          "failureCount": 0,
+          "successRate": 100
+        },
+        {
+          "toolName": "TaskUpdate",
+          "totalCalls": 42,
+          "successCount": 42,
+          "failureCount": 0,
+          "successRate": 100
+        },
+        {
+          "toolName": "TaskCreate",
+          "totalCalls": 25,
+          "successCount": 25,
+          "failureCount": 0,
+          "successRate": 100
+        },
+        {
+          "toolName": "Edit",
+          "totalCalls": 25,
+          "successCount": 25,
+          "failureCount": 0,
+          "successRate": 100
+        },
+        {
+          "toolName": "AskUserQuestion",
+          "totalCalls": 14,
+          "successCount": 14,
+          "failureCount": 0,
+          "successRate": 100
+        },
+        {
+          "toolName": "Skill",
+          "totalCalls": 3,
+          "successCount": 3,
+          "failureCount": 0,
+          "successRate": 100
+        }
+      ],
+      "tokens": {
+        "input": 220,
+        "output": 105678,
+        "cacheRead": 15089576,
+        "cacheCreation": 719607,
+        "cacheCreation1h": 719607,
+        "total": 15915081
+      },
+      "costUSD": 10.4303448,
+      "cacheReadCostUSD": 4.5268728,
+      "perModelCost": [
+        {
+          "model": "claude-sonnet-4-6",
+          "tokens": {
+            "input": 220,
+            "output": 105678,
+            "cacheRead": 15089576,
+            "cacheCreation": 719607,
+            "cacheCreation1h": 719607,
+            "total": 15915081
+          },
+          "costUSD": 10.4303448,
+          "unpriced": false
+        }
+      ],
+      "hadLog": true,
+      "agentSessionFile": "/Users/gustavoenriquegavilanmurcia/.claude/projects/-Users-gustavoenriquegavilanmurcia-Desktop-landing-page/023921fb-a9db-47cf-be40-ccc95bf2bf46.jsonl",
+      "costSeries": [
+        {
+          "t": 1788663654527,
+          "cost": 0.0692274,
+          "tokens": 37444
+        },
+        {
+          "t": 1788664175531,
+          "cost": 0.2093931,
+          "tokens": 250603
+        },
+        {
+          "t": 1788664186366,
+          "cost": 0.3776787,
+          "tokens": 432244
+        },
+        {
+          "t": 1788664215683,
+          "cost": 0.4805631,
+          "tokens": 664362
+        },
+        {
+          "t": 1788664302664,
+          "cost": 0.6088935,
+          "tokens": 909298
+        },
+        {
+          "t": 1788664364143,
+          "cost": 0.7949487,
+          "tokens": 1172715
+        },
+        {
+          "t": 1788664397499,
+          "cost": 0.9256698,
+          "tokens": 1393168
+        },
+        {
+          "t": 1788664434558,
+          "cost": 1.0779771,
+          "tokens": 1684248
+        },
+        {
+          "t": 1788664456223,
+          "cost": 1.2147024,
+          "tokens": 1985703
+        },
+        {
+          "t": 1788664482468,
+          "cost": 1.3187199,
+          "tokens": 2237231
+        },
+        {
+          "t": 1788664568502,
+          "cost": 1.4391765,
+          "tokens": 2556408
+        },
+        {
+          "t": 1788664646746,
+          "cost": 1.5876624,
+          "tokens": 2885585
+        },
+        {
+          "t": 1788664689774,
+          "cost": 1.7458497,
+          "tokens": 3231766
+        },
+        {
+          "t": 1788664724839,
+          "cost": 1.8694278,
+          "tokens": 3520761
+        },
+        {
+          "t": 1788664761506,
+          "cost": 2.080314,
+          "tokens": 3907036
+        },
+        {
+          "t": 1788665055019,
+          "cost": 2.2786995,
+          "tokens": 4330211
+        },
+        {
+          "t": 1788665136418,
+          "cost": 2.4232317,
+          "tokens": 4683867
+        },
+        {
+          "t": 1788665207537,
+          "cost": 3.0389304,
+          "tokens": 5158304
+        },
+        {
+          "t": 1788665415628,
+          "cost": 3.3127101,
+          "tokens": 5673237
+        },
+        {
+          "t": 1788665454978,
+          "cost": 3.9465414,
+          "tokens": 6218978
+        },
+        {
+          "t": 1788665615634,
+          "cost": 4.2268671,
+          "tokens": 6676836
+        },
+        {
+          "t": 1788665802615,
+          "cost": 5.1848244,
+          "tokens": 7318477
+        },
+        {
+          "t": 1788666026460,
+          "cost": 5.4581652,
+          "tokens": 8016484
+        },
+        {
+          "t": 1788666174437,
+          "cost": 5.7090393,
+          "tokens": 8735187
+        },
+        {
+          "t": 1788666222750,
+          "cost": 5.9626152,
+          "tokens": 9326635
+        },
+        {
+          "t": 1788666390659,
+          "cost": 6.3976887,
+          "tokens": 9887574
+        },
+        {
+          "t": 1788666704224,
+          "cost": 6.5264235,
+          "tokens": 10167878
+        },
+        {
+          "t": 1788666716985,
+          "cost": 6.605796,
+          "tokens": 10397435
+        },
+        {
+          "t": 1788666888414,
+          "cost": 7.3107081,
+          "tokens": 10764144
+        },
+        {
+          "t": 1788666904232,
+          "cost": 7.4965308,
+          "tokens": 11170432
+        },
+        {
+          "t": 1788666951338,
+          "cost": 7.7216853,
+          "tokens": 11589972
+        },
+        {
+          "t": 1788666982154,
+          "cost": 7.9125354,
+          "tokens": 11952718
+        },
+        {
+          "t": 1788667037415,
+          "cost": 8.075508,
+          "tokens": 12412208
+        },
+        {
+          "t": 1788667072574,
+          "cost": 8.5699314,
+          "tokens": 12877989
+        },
+        {
+          "t": 1788667181667,
+          "cost": 8.7132789,
+          "tokens": 13261626
+        },
+        {
+          "t": 1788667399678,
+          "cost": 9.0687417,
+          "tokens": 13779667
+        },
+        {
+          "t": 1788667423915,
+          "cost": 9.2676027,
+          "tokens": 14308617
+        },
+        {
+          "t": 1788667474660,
+          "cost": 9.4964085,
+          "tokens": 14848026
+        },
+        {
+          "t": 1788667798414,
+          "cost": 10.2039018,
+          "tokens": 15314288
+        },
+        {
+          "t": 1788667962765,
+          "cost": 10.4303448,
+          "tokens": 15915081
+        }
+      ],
+      "dispatches": [
+        {
+          "kind": "skill",
+          "name": "run",
+          "start": 1788664448061,
+          "durationMs": 58,
+          "costUSD": 0.0326037,
+          "tokens": {
+            "input": 1,
+            "output": 71,
+            "cacheRead": 57419,
+            "cacheCreation": 2385,
+            "cacheCreation1h": 2385,
+            "total": 59876
+          }
+        }
+      ],
+      "skillInvocations": [
+        {
+          "name": "run",
+          "totalCalls": 5,
+          "successCount": 5,
+          "failureCount": 0
+        }
+      ],
+      "agentInvocations": [],
+      "commandInvocations": [],
+      "sessionSource": "Pure chat"
+    }
+  ]
+}
