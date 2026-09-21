@@ -17,6 +17,7 @@ export default function Navbar() {
           <a href="#about">{t.nav.about}</a>
           <a href="#program">{t.nav.schedule}</a>
           <a href="#speakers">{t.nav.speakers}</a>
+          <a href="#venue">{t.nav.venue}</a>
           <a href="#faq">{t.nav.faq}</a>
         </div>
         <div className="navbar-right">
