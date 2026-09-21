@@ -6,6 +6,7 @@ import './components/Hero.css';
 import './components/About.css';
 import './components/Program.css';
 import './components/Speakers.css';
+import './components/Map.css';
 import './components/FAQ.css';
 import './components/Gallery.css';
 import './components/Registration.css';
@@ -16,6 +17,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Program from './components/Program';
 import Speakers from './components/Speakers';
+import Map from './components/Map';
 import FAQ from './components/FAQ';
 import Gallery from './components/Gallery';
 import Registration from './components/Registration';
@@ -30,6 +32,7 @@ export default function App() {
       <About />
       <Program />
       <Speakers />
+      <Map />
       <FAQ />
       <Gallery />
       <Registration />
